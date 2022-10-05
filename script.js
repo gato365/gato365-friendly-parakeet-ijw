@@ -3,7 +3,7 @@
 
 
 // Comment: Empty password
-var finalPassword = [];
+var finalPasswordPossibilities = [];
 
 //  Comment: User provides length of password
 var passwordLength = prompt("What is the length of your password?","GeeksforGeeks");
@@ -38,33 +38,52 @@ var isNumeric = Boolean("Should your password contain any numbers?");
 
 
 if(isUppercase == true){ // con
-  finalPassword = finalPassword.concat(upper);
+  finalPasswordPossibilities = finalPasswordPossibilities.concat(upper);
 }
 if(isLowercase == true){
-  finalPassword = finalPassword.concat(lower);
+  finalPasswordPossibilities = finalPasswordPossibilities.concat(lower);
 }
 if(isSpecialCharacter == true){
-  finalPassword = finalPassword.concat(specialCharacter);
+  finalPasswordPossibilities = finalPasswordPossibilities.concat(specialCharacter);
 }
 if(isNumeric == true){
-  finalPassword = finalPassword.concat(numeric);
+  finalPasswordPossibilities = finalPasswordPossibilities.concat(numeric);
 }
 
 
-// Issue 2: Need numbers that repeat, 
+// Issue 3: Need numbers that repeat, 
+// Issue 4: if lengthfinalPasswordPossibilities  is 0  (false for all boolean)
 
-// Find the length of possible char for password
-let lengthFinalPassword =  finalPassword.length;
-// Issue: if lengthFinalPassword  is 0  (false for all boolean)
 
-// randomly select
-// number of Digits
-// from final Password
+// Generate a Random Array of Numbers based on length of possibilities array
+let result = new Array(finalPasswordPossibilities.length)
+var randomNumberIndices = result.fill(0).map(() => Math.floor(Math.random()*lengthOfOptionsfinalPasswordPossibilities);
+
+
+var finalPassword = _.at(finalPasswordPossibilities, randomNumberIndices);
 
 
 // Issue: Make above code a method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+
+
+
 
 // Write password to the #password input
 function writePassword() {
