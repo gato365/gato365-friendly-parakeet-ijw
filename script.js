@@ -10,19 +10,23 @@ var passwordLength = prompt("What is the length of your password?","GeeksforGeek
 // Issue 1: Error Check to make sure user provides a number
 
 
+// isUppercase = Boolean("");
 
-// if(isUppercase == TRUE){
-// final Password = upper + final Password
-// }'
-// if (is Lowercase = = TRUE){
-// final Password = lower + final Password
-// }'
-// Éf (is special character = = TRUE){
-// final Password = special character 1- final Password
-// }'
-// if (is Numeric--= TRUE){
-// final Password = Numeric + final Password
-// }'
+if(isUppercase == true){
+finalPassword = upper + finalPassword
+}
+if(isLowercase == true){
+  finalPassword = lower + finalPassword
+}
+if(isSpecialCharacter == true){
+  finalPassword = specialCharacter + finalPassword
+}
+if(isNumeric == true){
+  finalPassword = numeric + finalPassword
+}
+
+
+
 // randomly select
 // number of Digits
 // from final Password
