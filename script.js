@@ -3,11 +3,15 @@
 
 
 // Comment: Empty password
-// Str final Password =""
+const finalPassword = '';
 
-//  From user
-// int number Of Digits =_
-// If (is Uppercase = = TRUE){
+//  Comment: User provides length of password
+var passwordLength = prompt("What is the length of your password?","GeeksforGeeks");
+// Issue 1: Error Check to make sure user provides a number
+
+
+
+// if(isUppercase == TRUE){
 // final Password = upper + final Password
 // }'
 // if (is Lowercase = = TRUE){
