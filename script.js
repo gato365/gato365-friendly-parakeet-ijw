@@ -9,6 +9,19 @@ const finalPassword = '';
 var passwordLength = prompt("What is the length of your password?","GeeksforGeeks");
 // Issue 1: Error Check to make sure user provides a number
 
+// a) Found code to create uppercase alphabet - https://plainenglish.io/blog/create-an-array-of-alphabet-characters-in-javascript-with-this-simple-trick
+const alpha = Array.from(Array(26)).map((e, i) => i + 65);
+const upper = alpha.map((x) => String.fromCharCode(x));
+
+
+// b) Found method to change upper into lower
+
+const lower = arr.map(element => {
+  return element.toLowerCase();
+});
+
+
+const lower = upper.toLowerCase();
 
 isUppercase = Boolean("Should your password contain any uppercase letters?");
 isLowercase = Boolean("Should your password contain any lowercase letters?");
