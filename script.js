@@ -10,7 +10,11 @@ var passwordLength = prompt("What is the length of your password?","GeeksforGeek
 // Issue 1: Error Check to make sure user provides a number
 
 
-// isUppercase = Boolean("");
+isUppercase = Boolean("Should your password contain any uppercase letters?");
+isLowercase = Boolean("Should your password contain any lowercase letters?");
+isSpecialCharacter= Boolean("Should your password contain any special characters?");
+isNumber = Boolean("Should your password contain any numbers?");
+
 
 if(isUppercase == true){
 finalPassword = upper + finalPassword
@@ -26,7 +30,7 @@ if(isNumeric == true){
 }
 
 
-
+// Issue 2: Need numbers that repeat, 
 // randomly select
 // number of Digits
 // from final Password
