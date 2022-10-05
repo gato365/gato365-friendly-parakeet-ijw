@@ -3,7 +3,7 @@
 
 
 // Comment: Empty password
-const finalPassword = '';
+const finalPassword = [];
 
 //  Comment: User provides length of password
 var passwordLength = prompt("What is the length of your password?","GeeksforGeeks");
@@ -37,17 +37,17 @@ isSpecialCharacter= Boolean("Should your password contain any special characters
 isNumber = Boolean("Should your password contain any numbers?");
 
 
-if(isUppercase == true){
-finalPassword = upper + finalPassword
+if(isUppercase == true){ // con
+  finalPassword = finalPassword.concat(upper);
 }
 if(isLowercase == true){
-  finalPassword = lower + finalPassword
+  finalPassword = finalPassword.concat(lower);
 }
 if(isSpecialCharacter == true){
-  finalPassword = specialCharacter + finalPassword
+  finalPassword = finalPassword.concat(specialCharacter);
 }
 if(isNumeric == true){
-  finalPassword = numeric + finalPassword
+  finalPassword = finalPassword.concat(numeric);
 }
 
 
