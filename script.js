@@ -3,7 +3,7 @@
 
 
 // Comment: Empty password
-const finalPassword = [];
+var finalPassword = [];
 
 //  Comment: User provides length of password
 var passwordLength = prompt("What is the length of your password?","GeeksforGeeks");
@@ -31,10 +31,10 @@ const numeric = ['0','1','2','3','4','5','6','7','8','9'];
 
 
 
-isUppercase = Boolean("Should your password contain any uppercase letters?");
-isLowercase = Boolean("Should your password contain any lowercase letters?");
-isSpecialCharacter= Boolean("Should your password contain any special characters?");
-isNumber = Boolean("Should your password contain any numbers?");
+var isUppercase = Boolean("Should your password contain any uppercase letters?");
+var isLowercase = Boolean("Should your password contain any lowercase letters?");
+var isSpecialCharacter= Boolean("Should your password contain any special characters?");
+var isNumeric = Boolean("Should your password contain any numbers?");
 
 
 if(isUppercase == true){ // con
@@ -52,13 +52,17 @@ if(isNumeric == true){
 
 
 // Issue 2: Need numbers that repeat, 
+
+// Find the length of possible char for password
+let lengthFinalPassword =  finalPassword.length;
+// Issue: if lengthFinalPassword  is 0  (false for all boolean)
+
 // randomly select
 // number of Digits
 // from final Password
 
 
-
-
+// Issue: Make above code a method
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 

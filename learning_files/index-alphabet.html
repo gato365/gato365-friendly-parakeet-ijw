@@ -25,7 +25,8 @@
 
 	<script>
 		function geek() {
-
+            // Found code to create alphabet
+            //https://plainenglish.io/blog/create-an-array-of-alphabet-characters-in-javascript-with-this-simple-trick
             const alpha = Array.from(Array(26)).map((e, i) => i + 65);
             const alphabet = alpha.map((x) => String.fromCharCode(x));
             console.log(alphabet);
