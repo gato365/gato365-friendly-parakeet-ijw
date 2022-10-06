@@ -10,21 +10,12 @@ var finalPasswordPossibilities = [];
 //
 
 // A.1 User provides length of password
-// var slider = document.getElementById("myRange");
-// var lengthOfOptionsfinalPP = document.getElementById("userPWLength");
-// slider.oninput = function() {
-//   output.innerHTML = this.value;
-// }
-// console.log( +lengthOfOptionsfinalPP);
-
-
-
 var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
+var lengthOfOptionsfinalPP = document.getElementById("demo");
+lengthOfOptionsfinalPP.innerHTML = slider.value;
 
 slider.oninput = function() {
-  output.innerHTML = this.value;
+  lengthOfOptionsfinalPP.innerHTML = this.value;
 }
 
 
@@ -33,6 +24,7 @@ slider.oninput = function() {
 // A.2 Determine whether user wants uppercase letters
 var isUppercase = document.getElementById(isUppercase)
 
+console.log(isUppercase);
 
 // A.3 Determine whether user wants lowercase letters
 var isLowercase = document.getElementById(isLowercase)
