@@ -30,24 +30,29 @@ var isSpecialCharacter = document.getElementById(isSpecialCharacter)
 var isNumeric = document.getElementById(isNumeric)
 
 
+//
+//
+// B. Create array of all possible chars
+//
+//
 
-// a) uppercase array - Found code to create uppercase alphabet - https://plainenglish.io/blog/create-an-array-of-alphabet-characters-in-javascript-with-this-simple-trick
+// B.1 uppercase array - Found code to create uppercase alphabet - https://plainenglish.io/blog/create-an-array-of-alphabet-characters-in-javascript-with-this-simple-trick
 const alpha = Array.from(Array(26)).map((e, i) => i + 65);
 const upper = alpha.map((x) => String.fromCharCode(x));
 
 
-// b) lowercase array - Found method to change upper into lower
+// B.2 lowercase array - Found method to change upper into lower
 //https://bobbyhadz.com/blog/javascript-convert-all-elements-of-array-to-lowercase#:~:text=To%20convert%20all%20array%20elements,array%20containing%20only%20lowercase%20strings.
 const lower = upper.map(element => {
   return element.toLowerCase();
 });
 
-// c) Special Characters created array from scracth
+// B.3 Special Characters created array from scracth
 //Issue 2: Get complete array of special character
 const specialCharacter = ['$','@','%'];
 
 
-// d) Numbers created array from scracth
+// B.4 Numbers created array from scracth
 //Issue 2: Get complete array of numbers
 const numeric = ['0','1','2','3','4','5','6','7','8','9'];
 
