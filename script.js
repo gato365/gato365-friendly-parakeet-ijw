@@ -1,17 +1,33 @@
-// Assignment code here
 
-
-
-// Comment: Empty password
+// Define empty password array
 var finalPasswordPossibilities = [];
 
-//  Comment: User provides length of password
+
+//
+//
+// A. Get Preferences from user
+//
+//
+
+// A.1 User provides length of password
+var slider = document.getElementById("myRange");
 var lengthOfOptionsfinalPP = document.getElementById("userPWLength");
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
+// A.2 Determine whether user wants uppercase letters
+var isUppercase = document.getElementById(isUppercase)
 
 
+// A.3 Determine whether user wants lowercase letters
+var isLowercase = document.getElementById(isLowercase)
+
+
+// A.4 Determine whether user wants special characters
+var isSpecialCharacter = document.getElementById(isSpecialCharacter)
+
+// A.5 Determine whether user wants numeric
+var isNumeric = document.getElementById(isNumeric)
 
 
 
@@ -37,10 +53,6 @@ const numeric = ['0','1','2','3','4','5','6','7','8','9'];
 
 
 
-var isUppercase = Boolean("Should your password contain any uppercase letters?");
-var isLowercase = Boolean("Should your password contain any lowercase letters?");
-var isSpecialCharacter= Boolean("Should your password contain any special characters?");
-var isNumeric = Boolean("Should your password contain any numbers?");
 
 
 if(isUppercase == true){ // con
@@ -91,11 +103,7 @@ var generateBtn = document.querySelector("#generate");
 function checkBoxFunction() {
   var checkBox = document.getElementById("myCheck");
   var text = document.getElementById("text");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-     text.style.display = "none";
-  }
+
 }
 
 
