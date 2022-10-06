@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<label for="isUppercase"> 1) Uppercase:</label> 
+<input type="checkbox" id="isUppercase" onclick="myFunction()">
+
+<!-- <p id="text" style="display:none">Checkbox is CHECKED!</p> -->
+
+
+
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

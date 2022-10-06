@@ -57,13 +57,13 @@ if(isNumeric == true){
 
 // Generate a Random Array of Numbers based on length of possibilities array
 let result = new Array(finalPasswordPossibilities.length)
-var randomNumberIndices = result.fill(0).map(() => Math.floor(Math.random()*lengthOfOptionsfinalPasswordPossibilities);
+var randomNumberIndices = result.fill(0).map(() => Math.floor(Math.random()*lengthOfOptionsfinalPasswordPossibilities));
 
 
 var finalPassword = _.at(finalPasswordPossibilities, randomNumberIndices);
 
 
-// Issue: Make above code a method
+// Issue 5: Make above code a method
 
 
 
@@ -96,3 +96,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
