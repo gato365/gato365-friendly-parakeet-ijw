@@ -15,7 +15,32 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
-          <h2>Generate a Please</h2>
+          <div class="slidecontainer">
+            <input type="range" min="8" max="128" value="50" class="slider" id="myRange",list="tickmarks">
+            <datalist id="tickmarks">
+            <option value="8"></option>
+            <option value="28"></option>
+            <option value="48"></option>
+            <option value="68"></option>
+            <option value="88"></option>
+            <option value="108"></option>
+            <option value="128"></option>
+            </datalist>
+
+
+          </div>
+          <label for="isUppercase"> 1) Should your password contain any <b>uppercase</b> letters?</label> 
+          <input type="checkbox" id="isUppercase" onclick="checkBoxFunction()">
+          </br>
+          <label for="isLowercase"> 3) Should your password contain any <b>lowercase</b> letters?</label> 
+          <input type="checkbox" id="isLowercase" onclick="checkBoxFunction()">
+          </br>
+          <label for="isSpecialCharacter"> 3) Should your password contain any <b>special characters</b>?</label> 
+          <input type="checkbox" id="isSpecialCharacter" onclick="checkBoxFunction()">
+          </br>
+          <label for="isNumeric"> 4) Should your password contain any <b> numbers</b>?</label> 
+          <input type="checkbox" id="isNumeric" onclick="checkBoxFunction()">
+          </br>
         </div>
         <div class="card-body">
           <textarea

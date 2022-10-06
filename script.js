@@ -6,7 +6,7 @@
 var finalPasswordPossibilities = [];
 
 //  Comment: User provides length of password
-var passwordLength = prompt("What is the length of your password?","GeeksforGeeks");
+
 // Issue 1: Error Check to make sure user provides a number
 
 // a) uppercase array - Found code to create uppercase alphabet - https://plainenglish.io/blog/create-an-array-of-alphabet-characters-in-javascript-with-this-simple-trick
@@ -82,7 +82,15 @@ var finalPassword = _.at(finalPasswordPossibilities, randomNumberIndices);
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-
+function checkBoxFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
 
 
 // Write password to the #password input
