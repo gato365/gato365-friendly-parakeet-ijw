@@ -17,18 +17,8 @@
           <h2>Generate a Password</h2>
           <div class="slidecontainer">
             <input type="range" min="8" max="128" value="50" class="slider" id="myRange",list="tickmarks">
-            <datalist id="tickmarks">
-            <option value="8"></option>
-            <option value="28"></option>
-            <option value="48"></option>
-            <option value="68"></option>
-            <option value="88"></option>
-            <option value="108"></option>
-            <option value="128"></option>
-            </datalist>
+            <p>Value: <span id="userPWLength"></span></p>
 
-
-          </div>
           <label for="isUppercase"> 1) Should your password contain any <b>uppercase</b> letters?</label> 
           <input type="checkbox" id="isUppercase" onclick="checkBoxFunction()">
           </br>

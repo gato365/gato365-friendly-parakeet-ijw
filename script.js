@@ -6,8 +6,14 @@
 var finalPasswordPossibilities = [];
 
 //  Comment: User provides length of password
+var lengthOfOptionsfinalPP = document.getElementById("userPWLength");
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
 
-// Issue 1: Error Check to make sure user provides a number
+
+
+
 
 // a) uppercase array - Found code to create uppercase alphabet - https://plainenglish.io/blog/create-an-array-of-alphabet-characters-in-javascript-with-this-simple-trick
 const alpha = Array.from(Array(26)).map((e, i) => i + 65);
@@ -57,7 +63,7 @@ if(isNumeric == true){
 
 // Generate a Random Array of Numbers based on length of possibilities array
 let result = new Array(finalPasswordPossibilities.length)
-var randomNumberIndices = result.fill(0).map(() => Math.floor(Math.random()*lengthOfOptionsfinalPasswordPossibilities));
+var randomNumberIndices = result.fill(0).map(() => Math.floor(Math.random()*lengthOfOptionsfinalPP));
 
 
 var finalPassword = _.at(finalPasswordPossibilities, randomNumberIndices);
