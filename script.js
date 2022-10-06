@@ -82,8 +82,12 @@ if(isNumeric == true){ // C.4 Does user want numeric
 // Issue 3: Need numbers that repeat, 
 // Issue 4: if lengthfinalPasswordPossibilities  is 0  (false for all boolean)
 
+//
+//
+// D. Generate a Random Array of Numbers based on length of possibilities array
+//
+//
 
-// Generate a Random Array of Numbers based on length of possibilities array
 let result = new Array(finalPasswordPossibilities.length)
 var randomNumberIndices = result.fill(0).map(() => Math.floor(Math.random()*lengthOfOptionsfinalPP));
 
