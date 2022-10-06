@@ -10,11 +10,26 @@ var finalPasswordPossibilities = [];
 //
 
 // A.1 User provides length of password
+// var slider = document.getElementById("myRange");
+// var lengthOfOptionsfinalPP = document.getElementById("userPWLength");
+// slider.oninput = function() {
+//   output.innerHTML = this.value;
+// }
+// console.log( +lengthOfOptionsfinalPP);
+
+
+
 var slider = document.getElementById("myRange");
-var lengthOfOptionsfinalPP = document.getElementById("userPWLength");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
+
+
+
+
 // A.2 Determine whether user wants uppercase letters
 var isUppercase = document.getElementById(isUppercase)
 
@@ -92,7 +107,7 @@ let result = new Array(finalPasswordPossibilities.length)
 var randomNumberIndices = result.fill(0).map(() => Math.floor(Math.random()*lengthOfOptionsfinalPP));
 
 
-var finalPassword = _.at(finalPasswordPossibilities, randomNumberIndices);
+// var finalPassword = _.at(finalPasswordPossibilities, randomNumberIndices);
 
 
 // Issue 5: Make above code a method
