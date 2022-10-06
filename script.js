@@ -58,18 +58,23 @@ const numeric = ['0','1','2','3','4','5','6','7','8','9'];
 
 
 
+//
+//
+// C. Add chars to array of password if user wants it
+//
+//
 
 
-if(isUppercase == true){ // con
+if(isUppercase == true){ // C.1 Does user want uppercases chars
   finalPasswordPossibilities = finalPasswordPossibilities.concat(upper);
 }
-if(isLowercase == true){
+if(isLowercase == true){ // C.2 Does user want lowercases chars
   finalPasswordPossibilities = finalPasswordPossibilities.concat(lower);
 }
-if(isSpecialCharacter == true){
+if(isSpecialCharacter == true){ // C.3 Does user want special chars
   finalPasswordPossibilities = finalPasswordPossibilities.concat(specialCharacter);
 }
-if(isNumeric == true){
+if(isNumeric == true){ // C.4 Does user want numeric
   finalPasswordPossibilities = finalPasswordPossibilities.concat(numeric);
 }
 
