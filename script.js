@@ -143,9 +143,9 @@ var randomNumberIndices = result.fill(0).map(() => Math.floor(Math.random()*lenF
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-function checkBoxFunction() {
-  var checkBox = document.getElementById("myCheck");
-  var text = document.getElementById("text");
+function checkBoxFunction(info) {
+  var checkBox = document.getElementById(info);
+  // var text = document.getElementById("text");
 
 }
 
