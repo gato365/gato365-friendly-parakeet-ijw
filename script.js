@@ -12,29 +12,51 @@ var finalPasswordPossibilities = [];
 // A.1 User provides length of password
 var slider = document.getElementById("myRange");
 var lengthOfOptionsfinalPP = document.getElementById("demo");
+//
+//  Problem 1: Why is this Telling HTML what to print
+//
 lengthOfOptionsfinalPP.innerHTML = slider.value;
 
+// Storing Length
+var lenFinalPassword = slider.value;
+
+
+///
+// PROBLEM 2: What is this doing? Do I need it?
+///
 slider.oninput = function() {
   lengthOfOptionsfinalPP.innerHTML = this.value;
 }
 
 
-
-
 // A.2 Determine whether user wants uppercase letters
-var isUppercase = document.getElementById(isUppercase)
+var isUppercase = document.getElementById("isUppercase");
 
 console.log(isUppercase);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // A.3 Determine whether user wants lowercase letters
-var isLowercase = document.getElementById(isLowercase)
+var isLowercase = document.getElementById(isLowercase);
 
 
 // A.4 Determine whether user wants special characters
-var isSpecialCharacter = document.getElementById(isSpecialCharacter)
+var isSpecialCharacter = document.getElementById(isSpecialCharacter);
 
 // A.5 Determine whether user wants numeric
-var isNumeric = document.getElementById(isNumeric)
+var isNumeric = document.getElementById(isNumeric);
 
 
 //
@@ -96,7 +118,7 @@ if(isNumeric == true){ // C.4 Does user want numeric
 //
 
 let result = new Array(finalPasswordPossibilities.length)
-var randomNumberIndices = result.fill(0).map(() => Math.floor(Math.random()*lengthOfOptionsfinalPP));
+var randomNumberIndices = result.fill(0).map(() => Math.floor(Math.random()*lenFinalPassword));
 
 
 // var finalPassword = _.at(finalPasswordPossibilities, randomNumberIndices);
@@ -126,6 +148,9 @@ function checkBoxFunction() {
   var text = document.getElementById("text");
 
 }
+
+
+
 
 
 // Write password to the #password input
