@@ -1,64 +1,3 @@
-
-// Define empty password array
-var finalPasswordPossibilities = [];
-
-
-//
-//
-// A. Get Preferences from user
-//
-//
-
-// A.1 User provides length of password
-var slider = document.getElementById("myRange");
-var lengthOfOptionsfinalPP = document.getElementById("demo");
-//
-//  Problem 1: Why is this Telling HTML what to print
-//
-lengthOfOptionsfinalPP.innerHTML = slider.value;
-
-// Storing Length
-var lenFinalPassword = slider.value;
-
-
-///
-// PROBLEM 2: What is this doing? Do I need it?
-///
-slider.oninput = function() {
-  lengthOfOptionsfinalPP.innerHTML = this.value;
-}
-
-
-// A.2 Determine whether user wants uppercase letters
-var isUppercase = document.getElementById("isUppercase");
-
-console.log(isUppercase);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// A.3 Determine whether user wants lowercase letters
-var isLowercase = document.getElementById(isLowercase);
-
-
-// A.4 Determine whether user wants special characters
-var isSpecialCharacter = document.getElementById(isSpecialCharacter);
-
-// A.5 Determine whether user wants numeric
-var isNumeric = document.getElementById(isNumeric);
-
-
 //
 //
 // B. Create array of all possible chars
@@ -76,66 +15,114 @@ const lower = upper.map(element => {
   return element.toLowerCase();
 });
 
+
+
 // B.3 Special Characters created array from scracth
 //Issue 2: Get complete array of special character
-const specialCharacter = ['$','@','%'];
+const specialCharacter = ['$', '@', '%', '!', '#', '%', '^', '&'];
 
 
 // B.4 Numbers created array from scracth
-//Issue 2: Get complete array of numbers
-const numeric = ['0','1','2','3','4','5','6','7','8','9'];
-
-
+//Issue 3: Get complete array of numbers
+const numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 
 //
 //
-// C. Add chars to array of password if user wants it
+// A. Get Preferences from user
 //
 //
 
+// A.1 User provides length of password
+var slider = document.getElementById("myRange");
+var lengthOfOptionsfinalPP = document.getElementById("demo");
+//
+//  Problem 1: Why is this Telling HTML what to print
+//
+lengthOfOptionsfinalPP.innerHTML = slider.value;
 
-if(isUppercase == true){ // C.1 Does user want uppercases chars
-  finalPasswordPossibilities = finalPasswordPossibilities.concat(upper);
+
+
+
+///
+// PROBLEM 2: What is this doing? Do I need it?
+
+slider.oninput = function () {
+  lengthOfOptionsfinalPP.innerHTML = this.value;
 }
-if(isLowercase == true){ // C.2 Does user want lowercases chars
-  finalPasswordPossibilities = finalPasswordPossibilities.concat(lower);
-}
-if(isSpecialCharacter == true){ // C.3 Does user want special chars
-  finalPasswordPossibilities = finalPasswordPossibilities.concat(specialCharacter);
-}
-if(isNumeric == true){ // C.4 Does user want numeric
-  finalPasswordPossibilities = finalPasswordPossibilities.concat(numeric);
-}
 
 
-// Issue 3: Need numbers that repeat, 
-// Issue 4: if lengthfinalPasswordPossibilities  is 0  (false for all boolean)
 
-//
-//
-// D. Generate a Random Array of Numbers based on length of possibilities array
-//
-//
-
-let result = new Array(finalPasswordPossibilities.length)
-var randomNumberIndices = result.fill(0).map(() => Math.floor(Math.random()*lenFinalPassword));
-
-
-// var finalPassword = _.at(finalPasswordPossibilities, randomNumberIndices);
-
-
-// Issue 5: Make above code a method
+// A.2 Determine whether user wants uppercase letters
+var uppercaseCheckBox = document.getElementById("isUppercase");
 
 
 
 
 
+// A.3 Determine whether user wants lowercase letters
+var lowercaseCheckBox = document.getElementById("isLowercase");
+
+
+// A.4 Determine whether user wants special characters
+var specialCharacterCheckBox = document.getElementById("isSpecialCharacter");
+
+// A.5 Determine whether user wants numeric
+var numericCheckBox = document.getElementById("isNumeric");
+
+
+
+var generatePassword = function () {
+
+
+  //
+  //
+  // C. Add chars to array of password if user wants it
+  //
+  //
+
+  // Define empty password array
+  var finalPasswordPossibilities = [];
+  if (uppercaseCheckBox.checked == true) { // C.1 Does user want uppercases chars
+    finalPasswordPossibilities = finalPasswordPossibilities.concat(upper);
+  }
+  if (lowercaseCheckBox.checked == true) { // C.2 Does user want lowercases chars
+    finalPasswordPossibilities = finalPasswordPossibilities.concat(lower);
+  }
+  if (specialCharacterCheckBox.checked == true) { // C.3 Does user want special chars
+    finalPasswordPossibilities = finalPasswordPossibilities.concat(specialCharacter);
+  }
+  if (numericCheckBox.checked == true) { // C.4 Does user want numeric
+    finalPasswordPossibilities = finalPasswordPossibilities.concat(numeric);
+  }
 
 
 
 
+  //
+  //
+  // D. Generate a Random Array of Numbers based on length of possibilities array
+  //
+  //
+
+// Storing Length
+var lenFinalPassword = Number.parseInt(slider.value);
+console.log(lenFinalPassword)
+
+  // Issue 5: How do I make this give me random numbers?
+  let result = new Array(lenFinalPassword)
+  var randomNumberIndices = result.fill(0).map(() => finalPasswordPossibilities [  Math.floor(Math.random() * finalPasswordPossibilities.length)] );
+  
+
+  //Issue 6: How do I make this work so that the random numbers get the indices of the array
+  
 
 
+  // Issue 7: Make above code a method
+
+
+  // Issue 8: How do I make incorporate this into the below function?
+  return randomNumberIndices.join('') ;
+};
 
 
 
