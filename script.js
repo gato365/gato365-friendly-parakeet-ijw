@@ -131,7 +131,7 @@ var generatePassword = function () {
   var finalPW = result.fill(0).map(() => finalPasswordPossibilities[Math.floor(Math.random() * finalPasswordPossibilities.length)]);
 
   // C.ii.3 Removes commas from password and returns it
-  return finalPW.join('');
+  return finalPW.join(''); 
 
 };
 
